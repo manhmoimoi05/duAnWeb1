@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Sora";
 }
@@ -15,10 +18,21 @@ header {
   margin: 0 auto;
 }
 .navigation {
-  padding-top: 30px;
+  padding: 20px 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #10375c;
+  transition: 0.5s;
+}
+.navigation.scrolled {
+  padding: 10px 5%;
+  background-color: #406181;
 }
 .nav {
   width: 363px;
@@ -32,14 +46,13 @@ header {
   font-size: 16px;
   line-height: 28px;
   color: #c9d2da;
+  transition: 0.5s;
 }
-.nav .nav_active,
 .nav_button:hover {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
-  color: #fff;
-  text-shadow: 0.5px #fff;
+  color: #2e80ce;
 }
 .button .btn {
   font-weight: 300;
@@ -48,9 +61,19 @@ header {
   line-height: 28px;
   color: #c9d2da;
   margin-left: 28px;
+  transition: 0.5s;
+}
+.btn:hover {
+  color: #2e80ce;
+  transform: scale(1.05);
+}
+.button {
+  display: flex;
+  align-items: baseline;
 }
 .button .btn_button {
-  display: inline-block;
+  position: relative;
+  display: block;
   width: 104px;
   font-weight: 400;
   font-size: 16px;
@@ -60,22 +83,30 @@ header {
   text-align: center;
   color: #fff;
   border-radius: 40px;
+  overflow: hidden;
+  transition: 0.5s;
 }
-a.nav_active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 6px;
-}
-a.nav_active::before {
+.button span {
   position: relative;
-  left: -6px;
-  display: inline-block;
+  z-index: 1;
+}
+a.btn_button::after {
   content: "";
-  width: 6px;
-  height: 6px;
-  background-color: #ffffff;
-  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.btn_button:hover::after {
+  width: 100%;
+}
+.btn_button:hover {
+  color: #10375c;
+  transform: scale(1.05);
 }
 .nav_content {
   padding-top: 150px;
@@ -172,6 +203,7 @@ img.sv_img {
   display: flex;
   width: 470px;
   height: 128px;
+  transition: 0.5s;
 }
 .cards img {
   margin-top: 21px;
@@ -199,10 +231,13 @@ img.sv_img {
   letter-spacing: 0%;
   color: #575f66;
 }
-.card_active {
+.cards:hover {
   box-shadow: 0 14px 28px #0000000d;
+  transform: translateY(-5px);
 }
 .btn_all {
+  position: relative;
+  overflow: hidden;
   display: inline-block;
   margin-top: 55px;
   width: 205px;
@@ -211,6 +246,29 @@ img.sv_img {
   background-color: #2e80ce;
   text-align: center;
   color: #fff;
+  transition: 0.5s;
+}
+.btn_all::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 0;
+  background-color: #406181;
+  transition: 0.5s;
+}
+.btn_all:hover {
+  color: #2e80ce;
+}
+.btn_all:hover::after {
+  top: 0;
+  height: 100%;
+}
+.btn_all_span {
+  position: relative;
+  z-index: 1;
 }
 .works {
   padding: 100px 0;
@@ -246,7 +304,7 @@ img.sv_img {
   height: 370px;
   border: 16px solid #eaf6ff;
   padding: 43px 42px;
-  transition: 2s 1s;
+  transition: 1s;
 }
 .card_2 h3 {
   font-weight: 600;
@@ -278,11 +336,12 @@ img.sv_img {
 .card_2:hover {
   border: 16px solid #2e80ce;
   translate: 0 -16px;
-  scale: 1.2;
-  transform: skew(10deg , 20deg);
-  rotate: 180deg;
+  scale: 1.05;
 }
-a.learn_more_active {
+a.learn {
+  transition: 1s;
+}
+.card_2:hover a.learn {
   color: #2e80ce;
 }
 .about_us {
@@ -335,9 +394,13 @@ a.learn_more_active {
   opacity: 1;
   border-radius: 6px;
 }
+.card_avt:hover .avt_2 {
+  transform: scale(1.05);
+}
 .avt_2 {
   top: -294px;
   position: relative;
+  transition: 0.5s;
 }
 .team_text {
   display: flex;
@@ -426,6 +489,9 @@ a.learn_more_active {
 .logo_icon a {
   margin-right: 20px;
 }
+.logo_new {
+  transition: 1s;
+}
 .logo_new:hover {
   box-shadow: 2px 2px 10px pink;
 }
@@ -491,9 +557,10 @@ a.learn_more_active {
 }
 .blog_1 {
   border: 1px solid #e8ebee;
+  transition: 1s;
 }
-.blog_2 {
-  box-shadow: 0 18px 50px #0000000d;
+.blog_1:hover {
+  transform: scale(1.05);
 }
 .blog_1 a {
   color: #10375c;
