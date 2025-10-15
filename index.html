@@ -10,12 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="./img/Group 105.svg">
+    <link rel="icon" type="image/png" href="./img/Group 105.svg" />
     <link rel="stylesheet" href="./style.css" />
     <title>Shine Smile</title>
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
       <div class="container">
         <div class="navigation">
           <div class="logo">
@@ -26,22 +26,24 @@
           <div class="nav">
             <ul>
               <li>
-                <a class="nav_button nav_active" href="">Home</a>
+                <a class="nav_button nav_active" href="#header">Home</a>
               </li>
               <li>
-                <a class="nav_button" href="">Services</a>
+                <a class="nav_button" href="#services">Services</a>
               </li>
               <li>
-                <a class="nav_button" href="">About</a>
+                <a class="nav_button" href="#about">About</a>
               </li>
               <li>
-                <a class="nav_button" href="">Doctors</a>
+                <a class="nav_button" href="#team">Doctors</a>
               </li>
             </ul>
           </div>
           <div class="button">
-            <a class="btn" href="./login.html" id="login-btn">Log In</a> 
-            <a class="btn btn_button" href="./register.html">Sign Up</a>
+            <a class="btn" href="./login.html" id="login-btn">Log In</a>
+            <a class="btn btn_button" href="./register.html"
+              ><span>Sign Up</span></a
+            >
           </div>
         </div>
         <div class="nav_content">
@@ -52,7 +54,9 @@
               a great dentist.
             </p>
             <div class="book_online">
-              <a class="btn_all" href="">Book Online</a>
+              <a class="btn_all" href=""
+                ><span class="btn_all_span">Book Online</span></a
+              >
               <p>or call (123) 456-7890</p>
             </div>
           </div>
@@ -64,7 +68,7 @@
       </div>
     </header>
     <main>
-      <div class="services">
+      <div id="services" class="services">
         <div class="container">
           <div class="services_text">
             <h2>Our services</h2>
@@ -106,12 +110,14 @@
                   </p>
                 </div>
               </div>
-              <a class="btn_all" href="">All Services</a>
+              <a class="btn_all" href=""
+                ><span class="btn_all_span">Learn More</span></a
+              >
             </div>
           </div>
         </div>
       </div>
-      <div class="works">
+      <div id="work" class="works">
         <div class="container">
           <div class="work_text">
             <h2>How it works</h2>
@@ -128,7 +134,7 @@
                 Search a doctor by education, qualifications or
                 experience-contact for inquiry.
               </p>
-              <a class="learn_more_active" href="">Learn More</a>
+              <a class="learn" href="">Learn More</a>
             </div>
             <div class="card_2">
               <img src="./img/Orion_find-user.svg" alt="" />
@@ -137,7 +143,7 @@
                 Search a doctor by education, qualifications or
                 experience-contact for inquiry.
               </p>
-              <a href="">Learn More</a>
+              <a class="learn" href="">Learn More</a>
             </div>
             <div class="card_2">
               <img src="./img/Orion_first-aid-kit.svg" alt="" />
@@ -146,12 +152,12 @@
                 Search a doctor by education, qualifications or
                 experience-contact for inquiry.
               </p>
-              <a href="">Learn More</a>
+              <a class="learn" href="">Learn More</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="about_us">
+      <div id="about" class="about_us">
         <div class="container">
           <div class="about_content">
             <div class="about_img">
@@ -164,16 +170,20 @@
                 If you’re missing multiple teeth due to decay, injury, or the
                 natural aging process, dentures might be the perfect solution.
               </p>
-              <a class="btn_all" href="">Learn More</a>
+              <a class="btn_all" href=""
+                ><span class="btn_all_span">Learn More</span></a
+              >
             </div>
           </div>
         </div>
       </div>
-      <div class="team">
+      <div id="team" class="team">
         <div class="container">
           <div class="team_text">
             <h2>Our virtual dentist</h2>
-            <a class="btn_all" href="">Meet our dentist</a>
+            <a class="btn_all" href=""
+              ><span class="btn_all_span">Meet Our Dentist</span></a
+            >
           </div>
           <div class="team_img">
             <div class="team_card">
@@ -284,7 +294,7 @@
                   <a href="">Learn More</a>
                 </div>
               </div>
-              <div class="blog_card blog_2">
+              <div class="blog_card blog_1">
                 <img src="./img/Image (1).svg" alt="" />
                 <div class="blog_text">
                   <h3>What Is Population Health Management?</h3>
@@ -307,7 +317,9 @@
               Take control of your dental health and get the personalized care
               you deserve. Call (541) 772-8846 to schedule
             </p>
-            <a class="btn_all" href="">Appointment</a>
+            <a class="btn_all" href=""
+              ><span class="btn_all_span">Appointment</span></a
+            >
           </div>
         </div>
       </div>
@@ -379,6 +391,6 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
