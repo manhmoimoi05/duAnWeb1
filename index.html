@@ -12,6 +12,11 @@
     />
     <link rel="icon" type="image/png" href="./img/Group 105.svg" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Shine Smile</title>
   </head>
   <body>
@@ -48,7 +53,9 @@
         </div>
         <div class="nav_content">
           <div class="nav_text">
-            <h1>Exceptional dental care for all ages.</h1>
+            <h1 class="h1_nav animate__animated animate__flash">
+              Exceptional dental care for all ages.
+            </h1>
             <p>
               Exceptional dental care for all ages. Your great smile begins with
               a great dentist.
@@ -78,7 +85,12 @@
             </p>
           </div>
           <div class="services_content">
-            <img class="sv_img" src="./img/Rectangle 19.svg" alt="" />
+            <img
+              class="sv_img"
+              data-aos="animate__flash"
+              src="./img/Rectangle 19.svg"
+              alt=""
+            />
             <div class="services_card">
               <div class="cards card_active">
                 <img src="./img/Group 4214.svg" alt="" />
@@ -120,7 +132,7 @@
       <div id="work" class="works">
         <div class="container">
           <div class="work_text">
-            <h2>How it works</h2>
+            <h2 data-aos="animate__flip">How it works</h2>
             <p>
               Exceptional dental care for all ages. Your great smile begins with
               a great dentist.
@@ -165,7 +177,7 @@
               <img class="about_img_2" src="./img/Rectangle 4449.svg" alt="" />
             </div>
             <div class="about_text">
-              <h2>Take back your smile with shine.</h2>
+              <h2 data-aos="animate__rotateIn">Take back your smile with shine.</h2>
               <p>
                 If you’re missing multiple teeth due to decay, injury, or the
                 natural aging process, dentures might be the perfect solution.
@@ -391,6 +403,14 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        useClassNames: true,
+        initClassName: false,
+        animatedClassName: "animate__animated",
+      });
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
