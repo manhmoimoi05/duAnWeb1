@@ -37,6 +37,9 @@ header {
 .nav {
   width: 363px;
 }
+.h1_nav{
+  animation: 1s infinite;
+}
 .nav ul {
   display: flex;
   justify-content: space-between;
